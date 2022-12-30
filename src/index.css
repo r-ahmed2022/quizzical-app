@@ -1,13 +1,197 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Karla:wght@400;500;700&family=Montserrat:wght@300;400;500;600&family=Roboto+Slab:wght@300&family=Roboto:wght@700&display=swap');
+
+* {
+    box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html, body {
+    margin: 0;
+    padding: 0;
 }
+
+body {
+font-family: 'Inter', sans-serif;
+font-family: 'Karla', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Slab', serif;
+height: 100vh;
+;
+    
+}
+
+.wrapper {
+    max-width: 750px;
+    height: 100%;
+    margin: .6em auto;
+    padding: .3em .8em;
+}
+
+.start-container {
+    font-family: 'Karla', sans-serif;
+    max-width: 960px;
+    min-width: 550px;
+    max-height: auto;
+    min-height: 550px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 4px 10px 10px #ccc;
+    background: #F5F7FB;
+    border-radius: 10px;
+    position: relative;
+    z-index: 0;
+}
+
+.quizscreen {
+    padding: 2em 3em;
+}
+
+.start {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.start h1 {
+    margin: 0 2px;
+}
+
+.desc {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: center;
+
+}
+
+.start-btn {
+    background: #4D5B9E;
+    width: 193px;
+    height: 52px;
+    border-radius: 15px;
+    border: 0;
+    color: #fff;
+    font-weight: 700;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+}
+
+.top-blob {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: #FFFAD1;
+  height: 235px;
+  width: 297px;
+  border-radius: 0px;
+  z-index: -1; 
+  -webkit-clip-path: polygon(42% 0%, 46% 7%, 53% 15%, 62% 21%, 70% 24%, 77% 26%, 85% 28%, 95% 31%, 99% 32%, 99% 0%);
+  clip-path: polygon(42% 0%, 46% 7%, 53% 15%, 62% 21%, 70% 24%, 77% 26%, 85% 28%, 95% 31%, 99% 32%, 99% 0%);
+
+
+}
+
+
+.blob2 {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
+  height: 235px;
+  width: 297px;
+  left: 0px;
+ border-radius: 0px;
+  background: #DEEBF8;
+  -webkit-clip-path: polygon(0% 35%, 15% 42%, 27% 50%, 35% 60%, 41% 69%, 48% 82%, 50% 91%, 50% 97%, 1% 98%);
+  clip-path: polygon(0% 35%, 15% 42%, 27% 50%, 35% 60%, 41% 69%, 48% 82%, 50% 91%, 50% 97%, 1% 98%);
+  z-index: -1;
+}
+
+.card {
+    width: 100%;
+    height: auto;
+    margin: 2em auto;
+    border-bottom: 2px solid #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: .4rem .8em;
+}
+
+.question {
+ width: 100%;
+font-family: Karla;
+font-size: 16px;
+font-weight: 700;
+line-height: 19px;
+letter-spacing: 0em;
+text-align: left;
+}
+
+.options {
+    display: flex;
+    width: 100%;
+    list-style: none;
+    justify-content: space-around;
+}
+
+.option {
+     font-family: 'Karla', sans-serif;
+     font-weight: 700;
+     margin: .3em 1em;
+     padding: .8em .7em;
+     box-shadow: 1px 2px 2px 2px #ccc;
+     border-radius: 1.3em;
+     cursor: pointer;
+     font-size: .7em;
+}
+
+
+
+.chosen_answer {
+  font-family: 'Karla';
+  font-weight: 700;
+  line-height: .7em;
+  text-align: center;
+  padding: .8em .7em;
+  border-radius: 1.3em;
+  box-shadow: 1px 2px 2px 2px #ccc;
+  cursor: pointer;
+  background: #94D7A2;
+}
+
+.wrong {
+  background: #F0D4D8;
+}
+
+.last-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly ;
+  align-items: center;
+  position: relative;
+}
+
+.score {
+   visibility: hidden;
+   position: absolute;
+   float: left;
+   bottom: 1em;
+   left: .2em;
+   color: #4D5B9E;
+   font-weight: 700;
+   font-style:italic;
+   padding: .3em 0;
+}
+
