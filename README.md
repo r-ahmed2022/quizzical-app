@@ -207,12 +207,6 @@ Microverse
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- FAQ (optional) -->
-Design idea by (<a href="#readme-top">Nelson Sakwa on Behance</a>)
-
-
-<!-- LICENSE -->
-
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./License.txt) licensed.
